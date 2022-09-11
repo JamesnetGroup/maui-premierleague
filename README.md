@@ -219,6 +219,31 @@ public class TablesViewModel
 
 ```
 
+## MatchModel
+```csharp
+    public TeamModel(string code)
+    {
+        Code = code;
+        Emblem = $"{code}.png";
+    }
+
+	public class MatchModel
+    {
+        public TeamModel Home { get; set; }
+        public TeamModel Away { get; set; }
+		public int HomeScore { get; set; }
+        public int AwayScore { get; set; }
+
+        public MatchModel(string home, string away, int homeScore, int awayScore)
+		{
+			Home = new(home);
+			Away = new(away);
+			HomeScore = homeScore;
+			AwayScore = awayScore;
+		}
+	}
+```
+
 ## ScoreTemplate
 ```xaml
 <DataTemplate x:Key="ResultTemplate">
@@ -286,6 +311,8 @@ public class TablesViewModel
         </StackLayout>
     </DataTemplate>
 ```
+
+
 
 
 - 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
