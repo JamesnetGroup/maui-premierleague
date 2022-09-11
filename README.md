@@ -117,15 +117,98 @@ public class TablesViewModel
     {
         List<TeamModel> teams = new();
         teams.Add(new("ars", 5, 0, 1, "Arsnal", "London"));
-        teams.Add(new("mci", 4, 2, 0, "Manchester City", "Manchester"));
+        teams.Add(new("mci", 4, 2, 0, "Man City", "Manchester"));
         teams.Add(new("tot", 4, 2, 0, "Tottenham", "London"));
-        teams.Add(new("liv", 3, 1, 2, "Liverpool", "Liverpool"));
-        teams.Add(new("che", 3, 0, 3, "Chelsea", "London"));
+        teams.Add(new("bri", 4, 1, 1, "Brighton", "East Sussex"));
+        teams.Add(new("mcn", 4, 0, 2, "Man United", "Manchester"));
+        teams.Add(new("che", 3, 1, 2, "Chelsea", "London"));
+        teams.Add(new("liv", 2, 3, 1, "Liverpool", "Liverpool"));
+        teams.Add(new("bre", 2, 3, 1, "BrentFord", "London"));
+        teams.Add(new("lee", 2, 3, 1, "Leeds United", "West Yorkshire"));
+        teams.Add(new("lee", 2, 2, 2, "Fullham", "London"));
+        teams.Add(new("lee", 1, 4, 1, "NewCastle United", "Tyne and Wear"));
+        teams.Add(new("lee", 2, 1, 3, "Southampton", "Hampshire"));
         ...
 
         return teams;
     }
 }
+```
+
+```xaml
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <DataTemplate x:Key="ClubTemplate">
+        <StackLayout Padding="10, 10, 10, 10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="CommonStates">                        
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="Transparent"/>
+                        </VisualState.Setters>
+                    </VisualState>                     
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#333333"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" 
+                        Grid.RowSpan="2"
+                        Margin="4, 0, 4, 0"
+                        Source="{Binding Code}"
+                        WidthRequest="40"
+                        HeightRequest="40"/>
+                <Label Grid.Column="1"
+                        Text="{Binding Name}"
+                        FontSize="Small"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="1"
+                        Grid.Row="1"
+                        Text="{Binding City}"
+                        TextColor="#AAAAAA"
+                        FontSize="Small"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2"
+                        Grid.RowSpan="2"
+                        FontSize="Medium"
+                        Text="{Binding Win}"
+                        Margin="0, 0, 10, 0"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3"
+                        Grid.RowSpan="2"
+                        FontSize="Medium"
+                        Margin="0, 0, 10, 0"
+                        Text="{Binding Draw}"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="4"
+                        Grid.RowSpan="2"
+                        FontSize="Medium"
+                        Text="{Binding Lose}"
+                        Margin="0, 0, 10, 0"
+                        VerticalTextAlignment="Center"/>
+            </Grid>
+        </StackLayout>
+    </DataTemplate>
+
+</ResourceDictionary>
+
 ```
 
 - 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
