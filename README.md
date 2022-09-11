@@ -54,6 +54,27 @@ TBD ...
 - 루트에 Pages 폴더 추가
 - Tables ContentPage 신규 추가
 - Grid를 통해 간단하게 레이아웃 구성하고 Label과 CollectionView 추가
+
+```xaml
+<StackLayout>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Text="EPL 2022/2023"
+               FontSize="Medium"                   
+               Margin="20, 10, 20, 10"/>
+        <CollectionView Grid.Row="1"
+                        SelectionMode="Single"
+                        BackgroundColor="#191919"
+                        ItemsSource="{Binding Teams}"
+                        ItemTemplate="{StaticResource ClubTemplate}">
+        </CollectionView>
+    </Grid>
+</StackLayout>
+```
+
 - SelectionMode를 Single으로 지정해야 아이템 Selection 기능이 활성화 된다.
 - 그 다음 TablesViewModel을 추가한다.
 - 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
