@@ -39,12 +39,40 @@ TBD ...
 
 ## 4. 개발
 
-- MAUI 프로젝트 생성
-- 불필요한 코드 및 파일 제거
-- 샘플에 필요한 신규파일 생성 및 리소스 연결
-- 기존 MainPage 클래스 타입을 ContentPage에서 Shell로 변경
-- Shell 안에 TabBar 구현
-- 텝 각각의 ContentPage 연결
-
-
-텝을 만들기 위해서는 
+- 프로젝트 생성
+- 다중 플랫폼 MAUI 앱 선택
+- App.xaml.cs 클릭
+- Current.UserAppTheme 다크로 고정
+- MainPage = new AppShell();
+- AppShell.xaml 클릭
+- Shell 안에 있는 Content 영역 모두 지우기
+- TabBar 및 Tab 2개 추가
+- Tab에서 Title 속성 입력
+- Images에 svg 파일 추가 및 빌드 옵션 MauiImage 선택
+- 다시 Tab으로 돌아와서 Icon에 svg 입력, 단 .png로 선언한다.
+- 각 탭에 ShellContent 추가
+- 루트에 Pages 폴더 추가
+- Tables ContentPage 신규 추가
+- Grid를 통해 간단하게 레이아웃 구성하고 Label과 CollectionView 추가
+- SelectionMode를 Single으로 지정해야 아이템 Selection 기능이 활성화 된다.
+- 그 다음 TablesViewModel을 추가한다.
+- 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
+- 다시 루트로 와서 Models 폴더 추가
+- ClubModel 추가 및 속성 추가
+- 다시 뷰모델로 돌아와서 List<ClubModel> Teams 속성 추가
+- 샘플 데이터르 반환하는 메서드 구현
+- 다시 테이블스 페이지로 돌아가서 CollectionView ItemsSource에 Teams를 바인딩한다.
+- 다음 리스트 항목을 디자인하기 새로운 데이터 템플릿을 추가한다. Styles.xaml
+- ClubTemplate 이름으로 디자인한다.
+- StackLayout 기본
+- VisualStateManager.VisualStateGroup
+- VisualState name=CommonState
+- VisualState name=Normal
+- Setter property=BackgroundColor value=Transparent
+- VisualState name=Selected
+- ""
+- Grid Design
+- 엠블럼 로고, 구단이름, 지역명, 승점, 승, 무, 패
+- Binding
+- 다시 컬렉션뷰에서 ClubTemplate StaticResource 바인딩
+- 중간 실행
