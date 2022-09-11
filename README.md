@@ -219,6 +219,75 @@ public class TablesViewModel
 
 ```
 
+## ScoreTemplate
+```xaml
+<DataTemplate x:Key="ResultTemplate">
+        <StackLayout Padding="10, 10, 10, 10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="CommonStates">                        
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="Transparent"/>
+                        </VisualState.Setters>
+                    </VisualState>                     
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#333333"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Column="0" 
+                        Margin="4, 0, 4, 0"
+                        Source="{Binding Emblem}"
+                        WidthRequest="40"
+                        HeightRequest="40"/>
+                <Label Grid.Column="1"
+                        Text="{Binding Code}"
+                        FontSize="Small"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3"
+                        Text="{Binding HomeScore}"
+                        FontSize="Small"
+                        Margin="10, 0, 10, 0"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="4"
+                        FontSize="Medium"
+                        Text="vs"
+                        Margin="10, 0, 10, 0"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="5"
+                        FontSize="Small"
+                        Margin="10, 0, 10, 0"
+                        Text="{Binding AwayScore}"
+                        VerticalTextAlignment="Center"/>
+                <Label Grid.Column="7"
+                        Text="{Binding Code}"
+                        FontSize="Small"
+                        VerticalTextAlignment="Center"/>
+                <Image Grid.Column="8" 
+                        Margin="4, 0, 4, 0"
+                        Source="{Binding Emblem}"
+                        WidthRequest="40"
+                        HeightRequest="40"/>
+            </Grid>
+        </StackLayout>
+    </DataTemplate>
+```
+
+
 - 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
 - 다시 루트로 와서 Models 폴더 추가
 - ClubModel 추가 및 속성 추가
