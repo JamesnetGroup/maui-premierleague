@@ -77,6 +77,33 @@ TBD ...
 
 - SelectionMode를 Single으로 지정해야 아이템 Selection 기능이 활성화 된다.
 - 그 다음 TablesViewModel을 추가한다.
+
+```csharp
+public class TablesViewModel
+{
+
+    public List<TeamModel> Teams { get; init; }
+
+    public TablesViewModel()
+    {
+        Teams = GetTeams();
+    }
+
+    private List<TeamModel> GetTeams()
+    {
+        List<TeamModel> teams = new();
+        teams.Add(new("ars", 5, 0, 1, "Arsnal", "London"));
+        teams.Add(new("mci", 4, 2, 0, "Manchester City", "Manchester"));
+        teams.Add(new("tot", 4, 2, 0, "Tottenham", "London"));
+        teams.Add(new("liv", 3, 1, 2, "Liverpool", "Liverpool"));
+        teams.Add(new("che", 3, 0, 3, "Chelsea", "London"));
+        ...
+
+        return teams;
+    }
+}
+```
+
 - 최소한의 MVVM 바인딩을 사용하 것이므로 외부 툴킷은 설치하지 않음.
 - 다시 루트로 와서 Models 폴더 추가
 - ClubModel 추가 및 속성 추가
