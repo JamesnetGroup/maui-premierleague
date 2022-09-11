@@ -79,6 +79,30 @@ TBD ...
 - 그 다음 TablesViewModel을 추가한다.
 
 ```csharp
+public class TeamModel
+{
+    public string Code { get; set; }
+    public string Name { get; set; }
+    public string City { get; set; }
+    public int Points { get; set; }
+    public int Win { get; set; }
+    public int Draw { get; set; }
+    public int Lose { get; set; }
+
+    public TeamModel(string code, int win, int draw, int lose, string name, string city)
+    {
+        Code = $"{code}.png";
+        Name = name;
+        City = city;
+        Points = (win * 3) + draw;
+        Win = win;
+        Draw = draw;
+        Lose = lose;
+    }
+}
+```
+
+```csharp
 public class TablesViewModel
 {
 
