@@ -221,27 +221,27 @@ public class TablesViewModel
 
 ## MatchModel
 ```csharp
-    public TeamModel(string code)
+public TeamModel(string code)
+{
+    Code = code;
+    Emblem = $"{code}.png";
+}
+
+public class MatchModel
+{
+    public TeamModel Home { get; set; }
+    public TeamModel Away { get; set; }
+    public int HomeScore { get; set; }
+    public int AwayScore { get; set; }
+
+    public MatchModel(string home, string away, int homeScore, int awayScore)
     {
-        Code = code;
-        Emblem = $"{code}.png";
+	Home = new(home);
+	Away = new(away);
+	HomeScore = homeScore;
+	AwayScore = awayScore;
     }
-
-	public class MatchModel
-    {
-        public TeamModel Home { get; set; }
-        public TeamModel Away { get; set; }
-		public int HomeScore { get; set; }
-        public int AwayScore { get; set; }
-
-        public MatchModel(string home, string away, int homeScore, int awayScore)
-		{
-			Home = new(home);
-			Away = new(away);
-			HomeScore = homeScore;
-			AwayScore = awayScore;
-		}
-	}
+}
 ```
 
 ## ScoreTemplate
