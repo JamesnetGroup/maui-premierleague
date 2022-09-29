@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <DataTemplate x:Key="ClubTemplate">
+        <StackLayout Padding="10, 10, 10, 10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#191919"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#333333"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0"
+                       Grid.RowSpan="2"
+                       Margin="4, 0, 4, 0"
+                       Source="{Binding Emblem}"
+                       WidthRequest="40"
+                       HeightRequest="40"/>
+                <Label Grid.Column="1"
+                       Text="{Binding Name}"
+                       FontSize="Small"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="1"
+                       Grid.Row="1"
+                       Text="{Binding City}"
+                           TextColor="#AAAAAA"
+                           FontSize="Small"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="2"
+                       Text="{Binding Points}"
+                       FontSize="Medium"
+                       Margin="0, 0, 10, 0"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="3"
+                       Text="{Binding Win}"
+                       Margin="0, 0, 10, 0"
+                       TextColor="#AAAAAA"
+                       FontSize="Small"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="4"
+                       Text="{Binding Draw}"
+                       Margin="0, 0, 10, 0"
+                       TextColor="#AAAAAA"
+                       FontSize="Small"
+                       VerticalTextAlignment="Center"/>
+                <Label Grid.Column="5"
+                       Text="{Binding Lose}"
+                       Margin="0, 0, 10, 0"
+                       TextColor="#AAAAAA"
+                       FontSize="Small"
+                       VerticalTextAlignment="Center"/>
+            </Grid>
+
+        </StackLayout>
+
+    </DataTemplate>
+</ResourceDictionary>

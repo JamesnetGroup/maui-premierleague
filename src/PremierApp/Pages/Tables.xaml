@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PremierApp.Pages.Tables"
+             Title="Tables">
+    <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="EPL 2022/2023"
+                   FontSize="Medium"
+                   Margin="20, 10, 20, 10"/>
+            <CollectionView Grid.Row="1"
+                            SelectionMode="Single"
+                            ItemsSource="{Binding Teams}"
+                            ItemTemplate="{StaticResource ClubTemplate}"/>
+        </Grid>
+
+    </StackLayout>
+</ContentPage>

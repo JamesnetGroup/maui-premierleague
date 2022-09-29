@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <DataTemplate x:Key="ScoreTemplate">
+        <StackLayout Padding="10, 10, 10, 10">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup Name="CommonStates">
+                    <VisualState Name="Normal">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#191919"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#333333"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0"
+                       Margin="4, 0, 4, 0"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Source="{Binding Home.Emblem}"/>
+
+                <Label Grid.Column="1"
+                       Text="{Binding Home.Code}"
+                       VerticalTextAlignment="Center"/>
+
+                <Label Grid.Column="2"
+                       Text="{Binding HomeScore}"
+                       Margin="10, 0, 10, 0"
+                       VerticalTextAlignment="Center"/>
+
+                <Label Grid.Column="3"
+                       Text="vs"
+                       VerticalTextAlignment="Center"/>
+
+                <Label Grid.Column="4"
+                       Text="{Binding AwayScore}"
+                       Margin="10, 0, 10, 0"
+                       VerticalTextAlignment="Center"/>
+
+                <Label Grid.Column="5"
+                       Text="{Binding Away.Code}"
+                       HorizontalTextAlignment="End"
+                       VerticalTextAlignment="Center"/>
+
+                <Image Grid.Column="6"
+                       Margin="4, 0, 4, 0"
+                       WidthRequest="40"
+                       HeightRequest="40"
+                       Source="{Binding Away.Emblem}"/>
+            </Grid>
+
+        </StackLayout>
+    </DataTemplate>
+</ResourceDictionary>

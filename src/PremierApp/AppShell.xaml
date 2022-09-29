@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PremierApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:PremierApp.Pages"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <Tab Title="Tables" Icon="list.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Tables}"/>
+        </Tab>
+        <Tab Title="Results" Icon="calendar.png">
+            <ShellContent ContentTemplate="{DataTemplate pages:Results}"/>
+        </Tab>
+    </TabBar>
+
+</Shell>
+
