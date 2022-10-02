@@ -7,7 +7,7 @@ This repository is a sample app implemented by MAUI.
 - Visual Studio 2022 for Mac
 - iPhone X (Test Device)
 
-Important
+___Important___
 - Theme
 - TabBar
 - CollectionView
