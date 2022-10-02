@@ -1,4 +1,4 @@
-## Premier League
+# Premier League
 This repository is a sample app implemented by MAUI.
 
 ### Specifications
