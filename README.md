@@ -3,8 +3,17 @@ This repository is a sample app implemented by MAUI.
 
 ### Specifications
 - Microsoft .NET 6 Core
+- MacOS (MacbookPro 14 M1)
 - Visual Studio 2022 for Mac
 - iPhone X (Test Device)
+
+Important
+- Theme
+- TabBar
+- CollectionView
+- DataTemplate
+- Geometry
+- .svg resource
 
 ## Screenshot
 ___Tables___
