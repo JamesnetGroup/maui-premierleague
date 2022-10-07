@@ -8,7 +8,7 @@ This repository is a sample app implemented by MAUI.
 - iPhone X (Test Device)
 
 ___Important___
-- MVVM
+- MVVM (pure)
 - Built in Theme
 - TabBar
 - CollectionView
