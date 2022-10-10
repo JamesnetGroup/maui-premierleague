@@ -52,6 +52,9 @@
 	  <Folder Include="Pages\" />
 	</ItemGroup>
 	<ItemGroup>
+	  <PackageReference Include="CommunityToolkit.Maui" Version="1.3.0" />
+	</ItemGroup>
+	<ItemGroup>
 	  <MauiXaml Update="Pages\Tables.xaml">
 	    <SubType></SubType>
 	  </MauiXaml>
