@@ -11,7 +11,8 @@ A cross-platform Premier League app implemented with .NET MAUI for learning purp
 
 This Premier League app is a learning-focused project implemented using .NET MAUI (Multi-platform App UI). It serves as an excellent example for developers, especially those transitioning from WPF to cross-platform development, to understand the similarities and differences between MAUI and WPF.
 
-<img width="400" alt="Tables" src="https://user-images.githubusercontent.com/52397976/193004770-75654ac4-ab56-4f4d-bd63-416110b94b18.png"> <img width="400" alt="Results" src="https://user-images.githubusercontent.com/52397976/193004945-4a76f3e2-3583-47e7-aef3-3dc10a265d3e.png">
+<img src="https://github.com/user-attachments/assets/015ed49e-77b7-463f-976e-04f84c949a58" width="49%"/>
+<img src="https://github.com/user-attachments/assets/015ed49e-77b7-463f-976e-04f84c949a58" width="49%"/>
 
 ## Key Technologies and Implementations
 
@@ -61,6 +62,11 @@ git clone https://github.com/jamesnet214/maui-premierleague.git
 #### 2. Open the solution
 - [x] Visual Studio (Windows only)
 - [x] JetBrains Rider (Windows and macOS)
+
+<img src="https://github.com/user-attachments/assets/af70f422-7057-4e77-a54d-042ee8358d2a" width="24%"/>
+<img src="https://github.com/user-attachments/assets/e4feaa10-a107-4b58-8d13-1d8be620ec62" width="24%"/>
+<img src="https://github.com/user-attachments/assets/5ff487f6-55e4-43e1-9abf-f8d419ee6943" width="24%"/>
+<img src="https://github.com/user-attachments/assets/153143f8-2e76-4dca-b056-2a405aaf6a78" width="24%"/>
 
 #### 3. Build and Run
 - [x] Windows 11
