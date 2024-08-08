@@ -1,4 +1,4 @@
-# Premier League MAUI 앱 [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md)
+# Premier League MAUI App  [![英文](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-red.svg)](README.zh-CN.md) [![韩文](https://img.shields.io/badge/Language-한국어-green.svg)](README.ko.md)
 
 .NET MAUI를 사용하여 구현한 크로스 플랫폼 Premier League 학습용 앱
 
